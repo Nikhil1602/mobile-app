@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "923993968807",
+    "project_id": "online-parking-reservati-7522b",
+    "storage_bucket": "online-parking-reservati-7522b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:923993968807:android:0eb178d6f0b2b8e77d0b82",
+        "android_client_info": {
+          "package_name": "com.mobileapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "923993968807-ndjbbo9l6tqpqht8m737b7qdbgghuhc9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUHlgpA3lzdKLCYwpZ_GuNnyzPsCRJoIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "923993968807-ndjbbo9l6tqpqht8m737b7qdbgghuhc9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
