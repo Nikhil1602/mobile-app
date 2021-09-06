@@ -27,7 +27,7 @@ Clone this project in your machine by running:
   npx react-native run-ios
 ```
 
-## FOR NATIVE APPLICATION:
+## PROBLEM IN RUNNING APPLICATION:
 
 For any problem with running native android application, 
 run below commands in the terminal and reboot your 
