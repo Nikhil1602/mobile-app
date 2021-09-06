@@ -27,6 +27,30 @@ Clone this project in your machine by running:
   npx react-native run-ios
 ```
 
+## FOR NATIVE APPLICATION:
+
+For any problem with running native application, run
+below commands in the terminal
+
+### -android:
+
+```bash
+  cd android
+  .\gradlew clean
+  cd ..
+  npm cache clean --force
+```
+
+### -ios:
+
+```bash
+  cd android
+  .\gradlew clean
+  cd ..
+```
+
+reboot your android device.
+
 ## Author
 
 - [Nikhil_Barot](https://github.com/Nikhil1602)
