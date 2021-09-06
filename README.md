@@ -29,10 +29,11 @@ Clone this project in your machine by running:
 
 ## FOR NATIVE APPLICATION:
 
-For any problem with running native application, run
-below commands in the terminal
+For any problem with running native android application, 
+run below commands in the terminal and reboot your 
+android/ios device.
 
-### -android:
+### -windows:
 
 ```bash
   cd android
@@ -41,15 +42,13 @@ below commands in the terminal
   npm cache clean --force
 ```
 
-### -ios:
+### -macOS:
 
 ```bash
   cd android
   .\gradlew clean
   cd ..
 ```
-
-reboot your android device.
 
 ## Author
 
