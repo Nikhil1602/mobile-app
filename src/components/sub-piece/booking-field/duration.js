@@ -6,7 +6,10 @@ import {form} from '../../../assets/js-styles';
 
 const DurationField = props => {
   const passValue = value => {
-    props.setBooking({...props.booking, duration: value});
+    props.setState({
+      ...props.state,
+      booking: {...props.state.booking, duration: value},
+    });
   };
 
   return (
@@ -14,7 +17,7 @@ const DurationField = props => {
       <Caption style={form.caption}>Choose Duration</Caption>
       <View style={form.picker_container}>
         <Picker
-          selectedValue={props.booking.duration}
+          selectedValue={props.state.booking.duration}
           style={form.picker}
           onValueChange={(item, index) => passValue(item)}>
           <Picker.Item label="half-an-hour" value="0.5" />

@@ -5,7 +5,10 @@ import {PRIMARY} from '../../../assets/theme';
 
 const NumberField = props => {
   const handleChange = data => {
-    props.setPayment({...props.payment, number: data});
+    props.setState({
+      ...props.state,
+      card: {...props.state.card, number: data},
+    });
   };
 
   return (
@@ -13,7 +16,7 @@ const NumberField = props => {
       mode="outlined"
       label="Card Number"
       keyboardType={'numeric'}
-      value={props.payment.number}
+      value={props.state.card.number}
       maxLength={12}
       style={form.input}
       outlineColor={PRIMARY}

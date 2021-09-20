@@ -5,14 +5,14 @@ import {PRIMARY} from '../../../assets/theme';
 
 const HolderName = props => {
   const handleChange = data => {
-    props.setPayment({...props.payment, name: data});
+    props.setState({...props.state, card: {...props.state.card, name: data}});
   };
 
   return (
     <TextInput
       mode="outlined"
       label="Name on Card"
-      value={props.payment.name}
+      value={props.state.card.name}
       style={form.input}
       outlineColor={PRIMARY}
       onChangeText={event => handleChange(event)}

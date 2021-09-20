@@ -5,7 +5,7 @@ import {form} from '../../../assets/js-styles';
 
 const CvvField = props => {
   const handleChange = data => {
-    props.setPayment({...props.payment, cvv: data});
+    props.setState({...props.state, card: {...props.state.card, cvv: data}});
   };
 
   return (
@@ -13,7 +13,7 @@ const CvvField = props => {
       mode="outlined"
       keyboardType={'numeric'}
       label="CVV"
-      value={props.payment.cvv}
+      value={props.state.card.cvv}
       maxLength={3}
       style={form.cvv}
       outlineColor={PRIMARY}

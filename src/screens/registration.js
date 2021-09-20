@@ -25,7 +25,12 @@ const Registration = () => {
           setState={setState}
         />
       </ScrollView>
-      <BottomArea changes={changes} setChanges={setChanges} />
+      <BottomArea
+        state={state}
+        setState={setState}
+        changes={changes}
+        setChanges={setChanges}
+      />
     </>
   );
 };

@@ -41,8 +41,8 @@ const TimeField = props => {
       <TimePicker
         show={show}
         setShow={setShow}
-        booking={props.booking}
-        setBooking={props.setBooking}
+        state={props.state}
+        setState={props.setState}
         date={date}
         setDate={setDate}
       />

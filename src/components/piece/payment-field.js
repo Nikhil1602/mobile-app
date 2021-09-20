@@ -1,26 +1,23 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View} from 'react-native';
 import {form} from '../../assets/js-styles';
-import {form_details} from '../../utils/container';
 import AmountField from '../sub-piece/payment-field/amount';
 import CvvField from '../sub-piece/payment-field/cvv';
 import HolderName from '../sub-piece/payment-field/name';
 import NumberField from '../sub-piece/payment-field/number';
 import ValidationField from '../sub-piece/payment-field/valid';
 
-const PaymentField = () => {
-  const [payment, setPayment] = useState(form_details.card);
-
+const PaymentField = props => {
   return (
     <View style={form.section}>
       <View>
-        <HolderName payment={payment} setPayment={setPayment} />
-        <NumberField payment={payment} setPayment={setPayment} />
+        <HolderName state={props.state} setState={props.setState} />
+        <NumberField state={props.state} setState={props.setState} />
         <View style={form.row}>
-          <CvvField payment={payment} setPayment={setPayment} />
-          <ValidationField payment={payment} setPayment={setPayment} />
+          <CvvField state={props.state} setState={props.setState} />
+          <ValidationField state={props.state} setState={props.setState} />
         </View>
-        <AmountField payment={payment} setPayment={setPayment} />
+        <AmountField state={props.state} setState={props.setState} />
       </View>
     </View>
   );

@@ -5,7 +5,7 @@ import {account_details} from '../../../utils/container';
 
 const ForgotLink = props => {
   const handleChange = () => {
-    props.setChanges(account_details.createAccount);
+    props.setChanges(account_details.forgotPassword);
   };
 
   return (

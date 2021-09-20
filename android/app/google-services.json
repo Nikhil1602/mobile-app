@@ -12,25 +12,15 @@
           "package_name": "com.mobileapp"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "923993968807-ndjbbo9l6tqpqht8m737b7qdbgghuhc9.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCUHlgpA3lzdKLCYwpZ_GuNnyzPsCRJoIQ"
+          "current_key": "AIzaSyCtd5zhfr2jdBuNGqAF9ctkRIXwKderzDk"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "923993968807-ndjbbo9l6tqpqht8m737b7qdbgghuhc9.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

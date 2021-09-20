@@ -10,15 +10,19 @@ const UserName = props => {
   };
 
   return (
-    <TextInput
-      label="Username"
-      mode="outlined"
-      style={account.field}
-      value={props.state.user}
-      onChangeText={text => handleChange(text)}
-      left={user_icon}
-      outlineColor={PRIMARY}
-    />
+    <>
+      {props.changes.showMail ? (
+        <TextInput
+          label="Username"
+          mode="outlined"
+          style={account.field}
+          value={props.state.user}
+          onChangeText={text => handleChange(text)}
+          left={user_icon}
+          outlineColor={PRIMARY}
+        />
+      ) : null}
+    </>
   );
 };
 

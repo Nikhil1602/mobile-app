@@ -11,7 +11,10 @@ const SlotField = props => {
 
   const getData = (e, ind) => {
     let value = e._dispatchInstances.memoizedProps.children;
-    props.setBooking({...props.booking, slot: value});
+    props.setState({
+      ...props.state,
+      booking: {...props.state.booking, slot: value},
+    });
   };
 
   return (

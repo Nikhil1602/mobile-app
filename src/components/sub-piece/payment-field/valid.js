@@ -9,7 +9,10 @@ const ValidationField = props => {
     //   ? props.setPayment({...props.payment, validation: data + '/'})
     //   : props.setPayment({...props.payment, validation: data});
     data = data.length == 2 ? `${data}/` : data;
-    props.setPayment({...props.payment, validation: data});
+    props.setState({
+      ...props.state,
+      card: {...props.state.card, validation: data},
+    });
   };
 
   return (
@@ -17,7 +20,7 @@ const ValidationField = props => {
       mode="outlined"
       label="Valid Through"
       keyboardType={'numeric'}
-      value={props.payment.validation}
+      value={props.state.card.validation}
       style={form.valid}
       maxLength={5}
       outlineColor={PRIMARY}

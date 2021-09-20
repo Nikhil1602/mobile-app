@@ -10,19 +10,15 @@ const UserMail = props => {
   };
 
   return (
-    <>
-      {props.changes.showMail ? (
-        <TextInput
-          label="Email"
-          mode="outlined"
-          style={account.field}
-          value={props.state.email}
-          onChangeText={text => handleChange(text)}
-          left={mail_icon}
-          outlineColor={PRIMARY}
-        />
-      ) : null}
-    </>
+    <TextInput
+      label="Email"
+      mode="outlined"
+      style={account.field}
+      value={props.state.email}
+      onChangeText={text => handleChange(text)}
+      left={mail_icon}
+      outlineColor={PRIMARY}
+    />
   );
 };
 

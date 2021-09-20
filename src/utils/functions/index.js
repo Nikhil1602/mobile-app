@@ -65,5 +65,23 @@ const formatTime = time => {
   return temp;
 };
 
-export {navigate, is_active, show_unshow};
+const isFull = data => {
+  if (
+    data.user.email != '' &&
+    data.user.password != '' &&
+    data.vehicle.number != '' &&
+    data.booking.date != '' &&
+    data.booking.time != '' &&
+    data.booking.slot != '' &&
+    data.card.name != '' &&
+    data.card.number != '' &&
+    data.card.cvv != '' &&
+    data.card.validation != ''
+  ) {
+    return true;
+  }
+  return false;
+};
+
+export {navigate, is_active, show_unshow, isFull};
 export {generateName, formatDate, formatTime};

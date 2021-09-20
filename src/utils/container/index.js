@@ -85,6 +85,7 @@ const form_details = {
 
 const account_details = {
   login: {
+    head: 'Welcome',
     subHead: 'Sign in to continue',
     showMail: false,
     button: 'Sign in',
@@ -93,9 +94,19 @@ const account_details = {
   },
 
   createAccount: {
+    head: 'Welcome',
     subHead: 'Create an account',
     showMail: true,
     button: 'Sign up',
+    text: 'Have an account? ',
+    link: 'Sign in',
+  },
+
+  forgotPassword: {
+    head: 'Forgot Password',
+    subHead: 'Reset your password',
+    showMail: false,
+    button: 'Send Mail',
     text: 'Have an account? ',
     link: 'Sign in',
   },

@@ -10,7 +10,7 @@ const DateField = props => {
   const [date, setDate] = useState(new Date());
   const [show, setShow] = useState(false);
 
-  const handleChange = () => {
+  const handleDate = () => {
     formatDate(date);
   };
 
@@ -34,15 +34,15 @@ const DateField = props => {
               name={'calendar'}
             />
           }
-          onChange={handleChange}
+          onChange={handleDate}
           disabled
         />
       </TouchableOpacity>
       <DatePicker
         show={show}
         setShow={setShow}
-        booking={props.booking}
-        setBooking={props.setBooking}
+        state={props.state}
+        setState={props.setState}
         date={date}
         setDate={setDate}
       />

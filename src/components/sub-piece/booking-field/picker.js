@@ -7,7 +7,10 @@ const DatePicker = props => {
     const currentDate = selectedDate || props.date;
     props.setShow(false);
     props.setDate(currentDate);
-    props.setBooking({...props.booking, date: formatDate(currentDate)});
+    props.setState({
+      ...props.state,
+      booking: {...props.state.booking, date: formatDate(currentDate)},
+    });
   };
 
   return (
@@ -29,7 +32,10 @@ const TimePicker = props => {
     const currentDate = selectedDate || props.date;
     props.setShow(false);
     props.setDate(currentDate);
-    props.setBooking({...props.booking, time: formatTime(currentDate)});
+    props.setState({
+      ...props.state,
+      booking: {...props.state.booking, time: formatTime(currentDate)},
+    });
   };
 
   return (

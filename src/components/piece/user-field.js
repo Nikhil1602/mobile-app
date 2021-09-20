@@ -1,16 +1,14 @@
-import React, {useState} from 'react';
-import {form_details} from '../../utils/container';
+import React from 'react';
 import {View} from 'react-native';
 import {form} from '../../assets/js-styles';
 import UserMail from '../sub-piece/user-field/mail';
 import UserNumber from '../sub-piece/user-field/phone';
 
-const UserField = () => {
-  const [user, setUser] = useState(form_details.user);
+const UserField = props => {
   return (
     <View style={form.section}>
-      <UserMail user={user} setUser={setUser} />
-      <UserNumber user={user} setUser={setUser} />
+      <UserMail state={props.state} setState={props.setState} />
+      <UserNumber state={props.state} setState={props.setState} />
     </View>
   );
 };

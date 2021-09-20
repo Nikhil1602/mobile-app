@@ -5,14 +5,14 @@ import {PRIMARY} from '../../../assets/theme';
 
 const UserNumber = props => {
   const handleChange = text => {
-    props.setUser({...props.user, number: text});
+    props.setState({...props.state, user: {...props.state.user, number: text}});
   };
 
   return (
     <TextInput
       mode="outlined"
       label="Phone Number"
-      value={props.user.number}
+      value={props.state.user.number}
       maxLength={10}
       keyboardType={'numeric'}
       style={form.input}

@@ -5,13 +5,16 @@ import {PRIMARY} from '../../../assets/theme';
 
 const VehicleType = props => {
   const handleChange = value => {
-    props.setVehicle({...props.vehicle, type: value});
+    props.setState({
+      ...props.state,
+      vehicle: {...props.state.vehicle, type: value},
+    });
   };
 
   return (
     <RadioButton.Group
       onValueChange={value => handleChange(value)}
-      value={props.vehicle.type}>
+      value={props.state.vehicle.type}>
       <RadioButton.Item
         color={PRIMARY}
         labelStyle={form.type_font}

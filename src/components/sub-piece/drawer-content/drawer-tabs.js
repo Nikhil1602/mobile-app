@@ -5,10 +5,14 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import {tabs} from '../../../utils/container';
 import {is_active, navigate} from '../../../utils/functions';
 import {SECONDARY} from '../../../assets/theme';
+import auth from '@react-native-firebase/auth';
 
 const DrawerTabs = props => {
   const [focus, setFocus] = useState(0);
   const change_state = (ind, tab) => {
+    if (ind == 5) {
+      auth().signOut();
+    }
     navigate(props.navigation, tab);
     setFocus(ind);
   };

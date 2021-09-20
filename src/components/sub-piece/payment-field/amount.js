@@ -5,7 +5,7 @@ import {form} from '../../../assets/js-styles';
 
 const AmountField = props => {
   const handleChange = data => {
-    props.setPayment({...props.payment, amount: data});
+    props.setState({...props.state, card: {...props.state.card, amount: data}});
   };
 
   return (
@@ -13,7 +13,7 @@ const AmountField = props => {
       mode="outlined"
       label="Amount (₹)"
       keyboardType={'numeric'}
-      value={props.payment.amount}
+      value={props.state.card.amount}
       disabled
       style={form.input}
       outlineColor={PRIMARY}

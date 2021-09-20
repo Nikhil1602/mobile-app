@@ -9,21 +9,23 @@ import {account} from '../../assets/js-styles';
 const Register = props => {
   return (
     <View>
-      <Text style={account.greeting}>Welcome!</Text>
+      <Text style={account.greeting}>{props.changes.head}</Text>
       <Text style={account.sub_head}>{props.changes.subHead}</Text>
-      <UserName state={props.state} setState={props.setState} />
-      <UserMail
+      <UserName
         state={props.state}
-        setState={props.setState}
         changes={props.changes}
+        setState={props.setState}
       />
+      <UserMail state={props.state} setState={props.setState} />
       <UserPassword state={props.state} setState={props.setState} />
-      <ForgotLink
-        state={props.state}
-        changes={props.changes}
-        setChanges={props.setChanges}
-        setState={props.setState}
-      />
+      {props.changes.button == 'Sign in' ? (
+        <ForgotLink
+          state={props.state}
+          changes={props.changes}
+          setChanges={props.setChanges}
+          setState={props.setState}
+        />
+      ) : null}
     </View>
   );
 };
