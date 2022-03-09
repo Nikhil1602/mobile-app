@@ -1,5 +1,6 @@
 import React from 'react';
 import auth from '@react-native-firebase/auth';
+import {handleLoginErrors} from '../../utils/functions';
 
 const updateName = (user, userName) => {
   user.updateProfile({
@@ -7,27 +8,27 @@ const updateName = (user, userName) => {
   });
 };
 
-const sendVerification = user => {
+const sendVerification = (user, setState) => {
   user
     .sendEmailVerification()
     .then(() => {
-      console.log('Verification sent successfully!');
+      setState({alert: false, message: 'Verification mail sent successfully!'});
     })
     .catch(() => {
-      console.log('Unable to send verification!');
+      setState({alert: false, message: 'Unable to send verification mail!'});
     });
 };
 
-const createAccount = props => {
+const createAccount = (state, setShow) => {
   auth()
-    .createUserWithEmailAndPassword(props.email, props.password)
+    .createUserWithEmailAndPassword(state.email, state.password)
     .then(userInfo => {
-      updateName(userInfo.user, props.user);
-      sendVerification(userInfo.user);
-      auth().signOut();
+      updateName(userInfo.user, state.user);
+      sendVerification(userInfo.user, setShow);
+      // auth().signOut();
     })
     .catch(error => {
-      console.log(error);
+      handleLoginErrors(error, setShow);
     });
 };
 

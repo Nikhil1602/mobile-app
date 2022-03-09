@@ -135,7 +135,7 @@ const ticket = StyleSheet.create({
 
   place_name: {
     fontFamily: 'Poppins-Bold',
-    fontSize: 20,
+    fontSize: 18,
     letterSpacing: 1,
     marginLeft: 5,
     color: DEFAULT_COLOR,
@@ -143,6 +143,7 @@ const ticket = StyleSheet.create({
 
   place_address: {
     fontFamily: 'Poppins-Italic',
+    fontSize: 12,
     letterSpacing: 1,
     color: DEFAULT_COLOR,
     marginLeft: 5,
@@ -490,7 +491,7 @@ const form = StyleSheet.create({
 
   locate: {
     color: '#fff',
-    width: '40%',
+    width: 150,
     marginHorizontal: 20,
   },
 

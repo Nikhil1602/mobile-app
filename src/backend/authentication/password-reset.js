@@ -1,14 +1,15 @@
 import React from 'react';
 import auth from '@react-native-firebase/auth';
+import {handleLoginErrors} from '../../utils/functions';
 
-const PasswordReset = email => {
+const PasswordReset = (email, setShow) => {
   auth
     .sendPasswordResetEmail(email)
     .then(() => {
-      console.log('Mail sent successfully!');
+      setShow({alert: false, message: 'Mail sent successfully!'});
     })
     .catch(error => {
-      console.log(error);
+      handleLoginErrors(error, setShow);
     });
 };
 

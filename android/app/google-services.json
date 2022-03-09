@@ -1,26 +1,36 @@
 {
   "project_info": {
-    "project_number": "923993968807",
-    "project_id": "online-parking-reservati-7522b",
-    "storage_bucket": "online-parking-reservati-7522b.appspot.com"
+    "project_number": "438855862141",
+    "project_id": "parking-reservation-user",
+    "storage_bucket": "parking-reservation-user.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:923993968807:android:0eb178d6f0b2b8e77d0b82",
+        "mobilesdk_app_id": "1:438855862141:android:504c52574e65738ad5ae14",
         "android_client_info": {
           "package_name": "com.mobileapp"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "438855862141-j9l31dhag028nvvh9n2k55ufkjphdv81.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
-          "current_key": "AIzaSyCtd5zhfr2jdBuNGqAF9ctkRIXwKderzDk"
+          "current_key": "AIzaSyC_5cOtoUUzwdI_eFIedaeaqOUo1tyXhAU"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "438855862141-j9l31dhag028nvvh9n2k55ufkjphdv81.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

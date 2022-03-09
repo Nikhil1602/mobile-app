@@ -1,18 +1,22 @@
 import React from 'react';
 import auth from '@react-native-firebase/auth';
+import {handleLoginErrors} from '../../utils/functions';
 
-const Login = props => {
+const Login = (email, password, setShow) => {
   auth()
-    .signInWithEmailAndPassword(props.email, props.password)
+    .signInWithEmailAndPassword(email, password)
     .then(userInfo => {
       if (userInfo.user.emailVerified) {
         console.log('Verified');
       } else {
-        console.log("You're not verfied!");
+        setShow({
+          alert: false,
+          message: 'You are not verfied. Please check your mail !',
+        });
       }
     })
     .catch(error => {
-      console.log(error);
+      handleLoginErrors(error, setShow);
     });
 };
 

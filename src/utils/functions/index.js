@@ -83,5 +83,31 @@ const isFull = data => {
   return false;
 };
 
+const handleLoginErrors = (error, setShow) => {
+  if (error.code == 'auth/wrong-password') {
+    setShow({alert: false, message: 'Wrong password try again !!'});
+  } else if (error.code == 'auth/network-request-failed') {
+    setShow({alert: false, message: 'Your are offline !!'});
+  } else if (error.code == 'auth/invalid-email') {
+    setShow({alert: false, message: 'Email is not valid !!'});
+  } else if (error.code == 'auth/user-not-found') {
+    setShow({alert: false, message: 'User does not exists !!'});
+  } else if (error.code == 'auth/email-already-in-use') {
+    setShow({alert: false, message: 'User already exists !!'});
+  } else {
+    setShow({alert: false, message: 'Something went wrong !!'});
+    console.log(error);
+  }
+};
+
+const handleForm = (setShow, value) => {
+  if (value) {
+    setShow({alert: false, message: 'Booking done !!'});
+  } else {
+    setShow({alert: false, message: 'Something missing in the form !!'});
+  }
+};
+
 export {navigate, is_active, show_unshow, isFull};
 export {generateName, formatDate, formatTime};
+export {handleLoginErrors, handleForm};
