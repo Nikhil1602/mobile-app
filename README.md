@@ -1,7 +1,17 @@
 # PARKING RESERVATION SYSTEM - MOBILE APPLICATION
 
-The Proposed Project is made with React-Native library,
-user can easily book parking slots of their favorite places.
+This is the mobile app for Parking Reservation,
+where user can book his space / slot for specific time-period,
+also can make cancellation request, view history of
+bookings, give feedback, view history of refunds, etc.
+
+### Tools used:
+
+- React-Native
+- Rect-Native-Paper
+- Firebase
+- Google-Maps-API
+- React-Navigation
 
 ## Installation
 
@@ -52,4 +62,4 @@ android/ios device.
 
 ## Author
 
-- [Nikhil_Barot](https://github.com/Nikhil1602)
+- [@NikhilBarot](https://github.com/Nikhil1602)
